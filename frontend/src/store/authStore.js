@@ -5,7 +5,7 @@ const API_URL = import.meta.env.VITE_SERVER_APP_URL?`${import.meta.env.VITE_SERV
 
 
 
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 export const useAuthStore = create((set) => ({
     user: null,
@@ -64,7 +64,6 @@ export const useAuthStore = create((set) => ({
         }
     },
     checkAuth: async () => {
-        console.log("import.meta.env.VITE_SERVER_APP_URL",import.meta.env.VITE_SERVER_APP_URL)
         await new Promise((resolve) => setTimeout(resolve, 1000))
         set({
             isCheckingAuth: true,
