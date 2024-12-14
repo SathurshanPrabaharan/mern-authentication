@@ -1,7 +1,7 @@
 import { create } from 'zustand' //state management libraries
 import axios from 'axios'
 
-const API_URL = `${process.env.CLIENT_URL}/api/auth`|| "http://localhost:3000/api/auth";
+const API_URL = `${process.env.CLIENT_URL}/api/auth` ||'http://localhost:3000/api/auth';
 
 
 axios.defaults.withCredentials = true;
