@@ -1,7 +1,7 @@
 import { create } from 'zustand' //state management libraries
 import axios from 'axios'
 
-const API_URL = import.meta.env.Mode==="development" ? "http://localhost:3000/api/auth":process.env.CLIENT_URL;
+const API_URL = import.meta.env.Mode==="development" ? "http://localhost:3000/api/auth":`${process.env.CLIENT_URL}/api/auth`;
 
 
 axios.defaults.withCredentials = true;
