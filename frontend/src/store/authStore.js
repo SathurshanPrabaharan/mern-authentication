@@ -1,9 +1,7 @@
 import { create } from 'zustand' //state management libraries
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_SERVER_URL
-    ? `/api/auth`
-    : 'http://localhost:3000/api/auth';
+const API_URL = "https://mern-authentication-frontend-five.vercel.app/api/auth";
 
 
 
