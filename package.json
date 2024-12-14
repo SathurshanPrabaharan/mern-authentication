@@ -1,0 +1,32 @@
+{
+  "name": "mern-authentication",
+  "version": "1.0.0",
+  "description": "This is a project about the famous full stack web development stack \"MERN\" Authendication \r * M - MongoDB\r * E - Express.js\r * R - React.js\r * N - Node.js",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development  nodemon backend/index.js",
+    "start": "cross-env NODE_ENV=production node backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mailtrap": "^3.4.0",
+    "mern-authentication": "file:",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
