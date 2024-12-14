@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 // 	// credentials: true
 // }
 // app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors({origin:true,credentials:true}));
 
 app.use(express.json()); // allows us to parse incoming requests:req.body
 app.use(cookieParser()); // allows us to parse incoming cookies
