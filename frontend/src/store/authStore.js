@@ -1,7 +1,7 @@
 import { create } from 'zustand' //state management libraries
 import axios from 'axios'
 
-const API_URL = "https://mern-authentication-frontend-five.vercel.app/api/auth";
+const API_URL = import.meta.env.VITE_SERVER_APP_URL?`${import.meta.env.VITE_SERVER_APP_URL}/api/auth`: "http://localhost:3000/api/auth";
 
 
 
@@ -64,6 +64,7 @@ export const useAuthStore = create((set) => ({
         }
     },
     checkAuth: async () => {
+        console.log("import.meta.env.VITE_SERVER_APP_URL",import.meta.env.VITE_SERVER_APP_URL)
         await new Promise((resolve) => setTimeout(resolve, 1000))
         set({
             isCheckingAuth: true,
